@@ -49,9 +49,16 @@ class Server:
         data = self.get_page(page, page_size)
         next_page = page + 1
         prev_page = page - 1
-        if len(data) == 0 or prev_page == 0:
-            next_page = None
         total_pages = math.ceil(len(self.dataset()) / page_size)
+        if len(data) == 0 or prev_page == 0:
+            return {
+                'page_size': len(data),
+                'page': page,
+                'data': data,
+                'next_page': None,
+                'prev_page': prev_page,
+                'total_pages': total_pages
+                }
         dict_pageInfo = {'page_size': len(data),
                          'page': page,
                          'data': data,
