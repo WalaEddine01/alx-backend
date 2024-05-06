@@ -41,12 +41,12 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
         Return a dictionary with the following key-value pairs:
-        - index: the current start index of the return page. That is the index of the first item in the
-        current page of results.
+        - index: the current start index of the return page. That is
+        the index of the first item in the current page of results.
         - data: the actual page of data containing page_size items.
         - page_size: the current page size
-        - next_index: the next index to query with. That is the index of the first item after the current
-        page of results.
+        - next_index: the next index to query with. That is the index of
+        the first item after the current page of results.
         """
         dict_index = self.indexed_dataset()
         assert index < len(dict_index)
