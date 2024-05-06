@@ -2,7 +2,7 @@
 """
 This mudule contains the This is the index_range method
 """
-from typing import Tuple, Dict
+from typing import Dict
 import csv
 import math
 from typing import List
