@@ -3,6 +3,7 @@
 This module contains the LRUCache class
 """
 from base_caching import BaseCaching
+from collections import OrderedDict
 
 
 class LRUCache(BaseCaching):
@@ -14,6 +15,7 @@ class LRUCache(BaseCaching):
         Constructor
         """
         super().__init__()
+        self.cache_data = OrderedDict()
 
     def put(self, key, item):
         """
@@ -25,6 +27,8 @@ class LRUCache(BaseCaching):
                 print("DISCARD: {}".format(Key_Dis))
             self.cache_data[key] = item
             self.cache_data.move_to_end(key, last=False)
+        else:
+            self.cache_data[key] = item
 
     def get(self, key):
         """
