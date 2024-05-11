@@ -21,7 +21,7 @@ class LRUCache(BaseCaching):
         """
         if key is not None and item is not None and key not in self.cache_data:
             if len(self.cache_data) > self.MAX_ITEMS - 1:
-                key_Dis = list(self.cache_data.keys())[-1]
+                key_Dis = list(self.cache_data.keys())[0]
                 self.cache_data.pop(key_Dis)
                 print("DISCARD: {}".format(key_Dis))
             self.cache_data[key] = item
