@@ -33,6 +33,7 @@ def hello_world():
 @babel.localeselector
 def get_locale():
     """
+    this is the get_local method
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
