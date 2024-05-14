@@ -2,7 +2,7 @@
 """
 Basic Flask app
 """
-from flask import Flask, render_template
+from flask import Flask
 from flask_babel import Babel
 app = Flask(__name__)
 
@@ -11,12 +11,9 @@ class Config:
     """
     Config class
     """
-    def __init__(self):
-        '''
-        '''
-        self.LANGUAGES = ["en", "fr"]
-        BABEL_DEFAULT_LOCALE = "en"
-        BABEL_DEFAULT_TIMEZONE = 'UTC'
+    LANGUAGES = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
 app.config.from_object(Config)
