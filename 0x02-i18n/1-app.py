@@ -20,12 +20,7 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@app.route('/')
-def get_index():
-    """
-    The get_index method
-    """
-    return render_template('1-index.html')
+
 
 
 if __name__ == '__main__':
