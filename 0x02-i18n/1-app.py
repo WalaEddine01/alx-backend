@@ -3,16 +3,21 @@
 Basic Flask app
 """
 from flask import Flask, render_template
+from flask_babel import Babel
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    '''
-    Render a basic template
-    '''
-    return render_template("1-index.html")
+class Config:
+    """
+    Config class
+    """
+    def __init__(self):
+        '''
+        '''
+        self.LANGUAGES = ["en", "fr"]
+        BABEL_DEFAULT_LOCALE = "en"
+        BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-if __name__ == "__main__":
-    app.run()
+app.config.from_object(Config)
+babel = Babel(app)
