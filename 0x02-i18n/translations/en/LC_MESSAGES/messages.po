@@ -3,24 +3,12 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
-msgid "home_title"
-msgstr "Welcome to Holberton"
-
-msgid "home_header"
-msgstr "Hello world!"
-
-msgid "logged_in_as"
-msgstr "You are logged in as %(username)s."
-
-msgid "not_logged_in"
-msgstr "You are not logged in."
-
-msgid "current_time_is"
-msgstr "The current time is %(current_time)s."
+msgid ""
+msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-14 22:42+0200\n"
-"PO-Revision-Date: 2024-05-14 22:42+0200\n"
+"POT-Creation-Date: 2024-05-14 23:04+0200\n"
+"PO-Revision-Date: 2024-05-14 23:04+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
