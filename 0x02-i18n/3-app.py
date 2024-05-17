@@ -20,15 +20,6 @@ class Config:
 
 app.config.from_object(Config)
 babel = Babel(app)
-babel._configure_jinja = False
-
-
-@app.route('/')
-def get_index():
-    """
-    The get_index method
-    """
-    return render_template('3-index.html')
 
 
 @babel.localeselector
@@ -37,6 +28,14 @@ def get_locale():
     this is the get_local method
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
+@app.route('/')
+def get_index():
+    """
+    The get_index method
+    """
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
