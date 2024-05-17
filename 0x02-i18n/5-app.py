@@ -37,7 +37,7 @@ def get_index():
     """
     The get_index method
     """
-    return render_template('4-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
