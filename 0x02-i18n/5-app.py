@@ -37,13 +37,15 @@ def get_user():
         return users.get(int(request.args.get('login_as')))
     except Exception:
         return None
-    
+
+
 @app.before_request
 def before_request():
     """
     before_request method
     """
     g.user = get_user()
+
 
 @babel.localeselector
 def get_locale():
